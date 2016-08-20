@@ -149,6 +149,7 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
     if(!_session) {
         _session = [[AVCaptureSession alloc] init];
         _session.sessionPreset = self.cameraQuality;
+        _session.automaticallyConfiguresApplicationAudioSession = false;
         
         // preview layer
         CGRect bounds = self.preview.layer.bounds;
